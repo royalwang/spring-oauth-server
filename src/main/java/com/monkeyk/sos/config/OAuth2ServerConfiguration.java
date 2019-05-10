@@ -67,7 +67,7 @@ public class OAuth2ServerConfiguration {
                     .requestMatchers().antMatchers("/unity/**")
                     .and()
                     .authorizeRequests()
-                    .antMatchers("/unity/**").access("#oauth2.hasScope('read') and hasRole('ROLE_UNITY')");
+                    .antMatchers("/unity/**").access("#oauth2.hasScope('read') and hasRole('UNITY')");
 
         }
 
@@ -93,7 +93,7 @@ public class OAuth2ServerConfiguration {
                     .requestMatchers().antMatchers("/m/**")
                     .and()
                     .authorizeRequests()
-                    .antMatchers("/m/**").access("#oauth2.hasScope('read') and hasRole('ROLE_MOBILE')");
+                    .antMatchers("/m/**").access("#oauth2.hasScope('read') and hasRole('MOBILE')");
 
         }
 
