@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -28,6 +29,7 @@ import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeSe
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestFactory;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
 import javax.sql.DataSource;
 
@@ -136,9 +138,20 @@ public class OAuth2ServerConfiguration {
         }
 
 
+        /*
+         * JDBC TokenStore
+         */
+//        @Bean
+//        public TokenStore tokenStore(DataSource dataSource) {
+//            return new JdbcTokenStore(dataSource);
+//        }
+
+        /*
+         * Redis TokenStore
+         */
         @Bean
-        public TokenStore tokenStore(DataSource dataSource) {
-            return new JdbcTokenStore(dataSource);
+        public TokenStore tokenStore(RedisConnectionFactory connectionFactory) {
+            return new RedisTokenStore(connectionFactory);
         }
 
 
