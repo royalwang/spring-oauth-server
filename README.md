@@ -159,15 +159,30 @@ Base on Spring-Boot
 <ul>
        <li>
             <p>
-                Version: <strong>0.5</strong> [planning]
+                Version: <strong>2.0.1</strong> [planning]
                 <br/>
-                Date: 2016-02-19 / ------
+                Date: 2018-04-22 / ---
             </p>
             <ol>
-                <li><p>(118) - Add java-config(零配置) 的支持, 以及启用 新的注解</p></li>
+                <li><p>增加使用代码生成AccessToken功能</p></li>
+                <li><p>增加将AccessToken存入Redis的配置参考</p></li>
+                <li><p><del>修改ROLE的错误配置</del></p></li>
+                <li><p><del>Use spring-boot 2.0.2.RELEASE</del></p></li>
+            </ol>
+            <br/>
+       </li> 
+       <li>......</li>      
+       <li>
+            <p>
+                Version: <strong>0.5</strong> [finished]
+                <br/>
+                Date: 2016-02-19 / 2016-05-24
+            </p>
+            <ol>
+                <li><p><del>(118) - Add java-config(零配置) 的支持, 以及启用 新的注解, branch: config</del></p></li>
                 <li><p><del>(138) - OAuth 'token' Restful API</del></p></li>
                 <li><p><del>(139) - User Overview/ user add/archive</del></p></li>
-                <li><p>(143) - Add project API document</p></li>
+                <li><p><del>(143) - Add project API document</del></p></li>
                 <li><p><del>(144) - Add MongoDB branch</del></p></li>
             </ol>
             <br/>
