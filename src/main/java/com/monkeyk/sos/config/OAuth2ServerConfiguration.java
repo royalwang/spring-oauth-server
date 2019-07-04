@@ -7,7 +7,6 @@ import com.monkeyk.sos.service.UserService;
 import com.monkeyk.sos.web.oauth.OauthUserApprovalHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -29,7 +28,6 @@ import org.springframework.security.oauth2.provider.code.AuthorizationCodeServic
 import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestFactory;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
 import javax.sql.DataSource;
@@ -132,10 +130,6 @@ public class OAuth2ServerConfiguration {
         private AuthenticationManager authenticationManager;
 
 
-        @Value("${spring.application.name:sos}")
-        private String applicationName;
-
-
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
@@ -157,7 +151,8 @@ public class OAuth2ServerConfiguration {
         @Bean
         public TokenStore tokenStore(RedisConnectionFactory connectionFactory) {
             final RedisTokenStore redisTokenStore = new RedisTokenStore(connectionFactory);
-            redisTokenStore.setPrefix(applicationName);
+            //prefix
+            redisTokenStore.setPrefix(RESOURCE_ID);
             return redisTokenStore;
         }
 
