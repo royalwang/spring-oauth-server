@@ -7,6 +7,7 @@ import com.monkeyk.sos.service.UserService;
 import com.monkeyk.sos.web.oauth.OauthUserApprovalHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -131,6 +132,10 @@ public class OAuth2ServerConfiguration {
         private AuthenticationManager authenticationManager;
 
 
+        @Value("${spring.application.name:sos}")
+        private String applicationName;
+
+
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
@@ -151,7 +156,9 @@ public class OAuth2ServerConfiguration {
          */
         @Bean
         public TokenStore tokenStore(RedisConnectionFactory connectionFactory) {
-            return new RedisTokenStore(connectionFactory);
+            final RedisTokenStore redisTokenStore = new RedisTokenStore(connectionFactory);
+            redisTokenStore.setPrefix(applicationName);
+            return redisTokenStore;
         }
 
 
