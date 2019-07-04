@@ -165,7 +165,7 @@ Base on Spring-Boot
             </p>
             <ol>
                 <li><p>增加使用代码生成AccessToken功能</p></li>
-                <li><p>增加将AccessToken存入Redis的配置参考</p></li>
+                <li><p><del>增加将AccessToken存入Redis的配置参考</del></p></li>
                 <li><p><del>修改ROLE的错误配置</del></p></li>
                 <li><p><del>Use spring-boot 2.0.2.RELEASE</del></p></li>
             </ol>
