@@ -161,7 +161,7 @@ Base on Spring-Boot
             <p>
                 Version: <strong>2.0.1</strong> [planning]
                 <br/>
-                Date: 2018-04-22 / ---
+                Date: 2018-05-01 / ---
             </p>
             <ol>
                 <li><p>增加使用代码生成AccessToken功能</p></li>
@@ -169,10 +169,61 @@ Base on Spring-Boot
                 <li><p><del>升级Spring Security OAuth版本为2.3.4.RELEASE</del></p></li>
                 <li><p><del>修改ROLE的错误配置</del></p></li>
                 <li><p><del>Use spring-boot 2.0.2.RELEASE</del></p></li>
+                <li><p><del>Fix issue   #IJO9R  /oauth/rest_token 接口 client_secret字段没有校验</del></p></li>
+                <li><p><del>将项目用视频方式展现出来，更直观</p></li>                
             </ol>
             <br/>
        </li> 
-       <li>......</li>      
+       <li>
+            <p>
+                Version: <strong>2.0.0</strong> [finished]
+                <br/>
+                Date: 2018-04-09 / 2018-04-21
+            </p>
+            <ol>
+                <li><p><del>更新UI,为了更易理解与使用,场景化</del></p></li>
+                <li><strong><del>使用 spring-boot 重构</del></strong></li>
+            </ol>
+       </li>
+      <li>
+           <p>
+               Version: <strong>1.1</strong> [cancel]
+               <br/>
+               Date: 2018-10-14 / ---
+           </p>
+           <ol>
+               <li><p>---</p></li>
+           </ol>
+      </li>
+       <li>
+            <p>
+                Version: <strong>1.0</strong> [finished]
+                <br/>
+                Date: 2017-03-30 / 2018-04-04
+            </p>
+            <ol>
+                <li><p><del>implicit测试时 取消掉 client secret</del></p></li>
+                <li><p>更新UI,为了更易理解与使用,场景化</p></li>
+                <li><p>增加删除access_token API</p></li>
+                <li><p>增加删除 refresh_token API</p></li>
+                <li><p><del>增加校验 access_token API: /oauth/check_token</del></p></li>
+                <li><p><del>Fix ISSUE #IGNQ9  CustomJdbcTokenStore中的CacheEvict不起作用</del></p></li>
+                <li><p>---</p></li>
+            </ol>
+       </li>
+       <li>
+            <p>
+                Version: <strong>0.6</strong> [finished]
+                <br/>
+                Date: 2016-07-07 / 2016-10-13
+            </p>
+            <ol>
+                <li><p><del>(150) - 修改OAUTH错误时返回JSON数据</del></p></li>
+                <li><p><del>(151) - 数据添加Ehcache缓存支持</del></p></li>
+                <li><p><del>(158) - 对配置,代码必要的地方添加注释,方便理解</del></p></li>
+                <li><p><del>添加OIDC协议文档</del></p></li>
+            </ol>
+       </li>   
        <li>
             <p>
                 Version: <strong>0.5</strong> [finished]
@@ -267,6 +318,7 @@ Base on Spring-Boot
         <li><p><em>2016-02-19</em>        Add 0.5 version development planning</p></li>
         <li><p><em>2016-04-03</em>        Add <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">config</a> branch</p></li>
         <li><p><em>2016-04-14</em>        Add <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
+        <li><p><em>2019-05-14</em>        Add <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
     </ol>
 </p>
 
@@ -319,6 +371,11 @@ Base on Spring-Boot
             <p>
                 <a href="http://andaily.com/blog/?p=440">OIDC–基于OAuth2的下一代身份认证授权协议</a>
             </p>
+       </li>       
+       <li>
+            <p>
+                <a href="http://andaily.com/blog/?p=19776">在spring-oauth-server中将AccessToken存入Redis的配置</a>
+            </p>
        </li>
 </ul>
 
@@ -369,5 +426,4 @@ Base on Spring-Boot
 </p>
 <p>
  <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
- 或访问 <a href="http://monkeyk.com/kso/" target="_blank">http://monkeyk.com/kso/</a>
 </p>
