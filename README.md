@@ -320,7 +320,7 @@ Base on Spring-Boot
         <li><p><em>2016-04-14</em>        Add <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
         <li><p><em>2018-04-21</em>        使用spring-boot重构,增加2.0.0实现 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.0/">2.0.0</a> </p></li>
         <li><p><em>2018-05-01</em>        开始 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">2.0.1</a> 分支开发</p></li>
-        <li><p><em>2018-05-01</em>        Add Redis <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">config</a> branch</p></li>
+        <li><p><em>2019-07-04</em>        Add Redis <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">config</a> branch</p></li>
     </ol>
 </p>
 
