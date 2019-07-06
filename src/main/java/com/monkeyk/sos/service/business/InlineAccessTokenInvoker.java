@@ -1,6 +1,7 @@
 package com.monkeyk.sos.service.business;
 
 import com.monkeyk.sos.service.dto.AccessTokenDto;
+import com.monkeyk.sos.web.context.SOSContextHolder;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,10 +32,11 @@ public abstract class InlineAccessTokenInvoker implements InitializingBean {
     private static final Logger LOG = LoggerFactory.getLogger(InlineAccessTokenInvoker.class);
 
 
-    protected transient AuthenticationManager authenticationManager;
+    protected transient AuthenticationManager authenticationManager = SOSContextHolder.getBean(AuthenticationManager.class);
 
-    protected transient AuthorizationServerTokenServices tokenServices;
-    protected transient ClientDetailsService clientDetailsService;
+    protected transient AuthorizationServerTokenServices tokenServices = SOSContextHolder.getBean(AuthorizationServerTokenServices.class);
+    ;
+    protected transient ClientDetailsService clientDetailsService = SOSContextHolder.getBean(ClientDetailsService.class);
 
 
     public InlineAccessTokenInvoker() {
@@ -73,6 +75,10 @@ public abstract class InlineAccessTokenInvoker implements InitializingBean {
         TokenRequest tokenRequest = oAuth2RequestFactory.createTokenRequest(params, clientDetails);
         final OAuth2AccessToken oAuth2AccessToken = tokenGranter.grant(getGrantType(params), tokenRequest);
 
+        if (oAuth2AccessToken == null) {
+            LOG.warn("TokenGranter: {} grant OAuth2AccessToken null", tokenGranter);
+            return null;
+        }
         AccessTokenDto accessTokenDto = new AccessTokenDto(oAuth2AccessToken);
         LOG.debug("Invoked accessTokenDto: {}", accessTokenDto);
         return accessTokenDto;
