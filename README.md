@@ -159,6 +159,17 @@ Base on Spring-Boot
 项目的开发管理使用开源项目 <a href="https://gitee.com/mkk/andaily-developer">andaily-developer</a>.
 </p>
 <ul>     
+	   <li>
+            <p>
+                Version: <strong>2.0.2</strong> [planning]
+                <br/>
+                Date: 2019-08-05 / ---
+            </p>
+            <ol>
+                <li><p>...</p></li>             
+            </ol>
+            <br/>
+       </li>  
        <li>
             <p>
                 Version: <strong>2.0.1</strong> [finished]
