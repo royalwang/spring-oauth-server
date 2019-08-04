@@ -156,15 +156,15 @@ Base on Spring-Boot
 <br/>
 项目的开发管理使用开源项目 <a href="https://gitee.com/mkk/andaily-developer">andaily-developer</a>.
 </p>
-<ul>
+<ul>     
        <li>
             <p>
-                Version: <strong>2.0.1</strong> [planning]
+                Version: <strong>2.0.1</strong> [finished]
                 <br/>
-                Date: 2018-05-01 / ---
+                Date: 2018-05-01 / 2019-08-04
             </p>
             <ol>
-                <li><p>增加使用代码生成AccessToken功能</p></li>
+                <li><p><del>增加使用代码生成AccessToken功能</del></p></li>
                 <li><p><del>增加将AccessToken存入Redis的配置参考</del></p></li>
                 <li><p><del>升级Spring Security OAuth版本为2.3.4.RELEASE</del></p></li>
                 <li><p><del>修改ROLE的错误配置</del></p></li>
@@ -321,6 +321,7 @@ Base on Spring-Boot
         <li><p><em>2018-04-21</em>        使用spring-boot重构,增加2.0.0实现 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.0/">2.0.0</a> </p></li>
         <li><p><em>2018-05-01</em>        开始 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">2.0.1</a> 分支开发</p></li>
         <li><p><em>2019-07-04</em>        Add Redis <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">config</a> branch</p></li>
+        <li><p><em>2019-08-04</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.1/">2.0.1</a> 版本</p></p></li>
     </ol>
 </p>
 
@@ -377,6 +378,11 @@ Base on Spring-Boot
        <li>
             <p>
                 <a href="http://andaily.com/blog/?p=19776">在spring-oauth-server中将AccessToken存入Redis的配置</a>
+            </p>
+       </li>       
+       <li>
+            <p>
+                <a href="http://andaily.com/blog/?p=19793">如何通过代码生成AccessToken</a>
             </p>
        </li>
 </ul>
