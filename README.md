@@ -21,8 +21,9 @@ Base on Spring-Boot
 <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
 (持续更新...)
 <br/>
+<br/>
 <p>
-    >1000 star 奖杯: <a href="http://andaily.com/blog/wp-content/uploads/2019/09/sos-1000-stars.jpg">sos-1000-stars.jpg</a>
+    1000 star Gitee奖杯: <a href="http://andaily.com/blog/wp-content/uploads/2019/09/sos-1000-stars.jpg" target="_blank">sos-1000-stars.jpg</a>
 </p>
 <hr/>
 
