@@ -20,7 +20,10 @@ Base on Spring-Boot
 <h4>技术视频</h4>
 <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
 (持续更新...)
-
+<br/>
+<p>
+    >1000 star 奖杯: <a href="http://andaily.com/blog/wp-content/uploads/2019/09/sos-1000-stars.jpg">sos-1000-stars.jpg</a>
+</p>
 <hr/>
 
 <strong>MySQL版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/">master</a></strong>
@@ -451,6 +454,4 @@ Base on Spring-Boot
 </p>
 
 <hr/>
-<p>
-    <img src="http://andaily.com/blog/wp-content/uploads/2019/09/sos-1000-stars.jpg" alt="1000-stars" style="max-width:600px;"/>
-</p>
+
