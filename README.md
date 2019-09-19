@@ -450,6 +450,7 @@ Base on Spring-Boot
  <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
 </p>
 
+<hr/>
 <p>
-    <img src="https://files.gitee.com/group1/M00/09/75/wKgCNF2DJJmAD9eQAAGMZDPAIY4574.jpg?token=fce27d96f94e811ef33197bd8cdaabb8&ts=1568875673&attname=sos-1000-stars.jpg&disposition=inline" alt="1000-stars" style="max-width:600px;"/>
+    <img src="http://andaily.com/blog/wp-content/uploads/2019/09/sos-1000-stars.jpg" alt="1000-stars" style="max-width:600px;"/>
 </p>
