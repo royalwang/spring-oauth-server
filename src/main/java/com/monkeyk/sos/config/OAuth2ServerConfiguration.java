@@ -180,6 +180,7 @@ public class OAuth2ServerConfiguration {
         @Override
         public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
             oauthServer.realm("spring-oauth-server")
+                    // 支持 client_credentials 的配置
                     .allowFormAuthenticationForClients();
         }
 
