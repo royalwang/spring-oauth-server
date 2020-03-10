@@ -145,7 +145,7 @@ public class OAuth2ServerConfiguration {
         }
 
         /*
-         * Redis TokenStore
+         * Redis TokenStore (有Redis场景时使用)
          */
 //        @Bean
 //        public TokenStore tokenStore(RedisConnectionFactory connectionFactory) {
