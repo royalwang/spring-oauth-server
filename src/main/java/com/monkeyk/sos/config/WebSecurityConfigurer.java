@@ -50,11 +50,13 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
         http.csrf().ignoringAntMatchers("/oauth/authorize", "/oauth/token", "/oauth/rest_token");
 
         http.authorizeRequests()
+                // permitAll() 的URL路径属于公开访问，不需要权限
                 .antMatchers("/public/**").permitAll()
                 .antMatchers("/static/**").permitAll()
                 .antMatchers("/oauth/rest_token*").permitAll()
                 .antMatchers("/login*").permitAll()
 
+                // /user/ 开头的URL需要 ADMIN 权限
                 .antMatchers("/user/**").hasAnyRole("ADMIN")
 
                 .antMatchers(HttpMethod.GET, "/login*").anonymous()

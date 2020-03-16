@@ -47,7 +47,10 @@ public class OAuth2ServerConfiguration {
     public static final String RESOURCE_ID = "sos-resource";
 
 
-    // unity resource
+    /**
+     * // unity resource
+     * UNITY 资源的访问权限配置
+     */
     @Configuration
     @EnableResourceServer
     protected static class UnityResourceServerConfiguration extends ResourceServerConfigurerAdapter {
@@ -64,6 +67,7 @@ public class OAuth2ServerConfiguration {
                     // session creation to be allowed (it's disabled by default in 2.0.6)
                     .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                     .and()
+                    // 所有以 /unity/  开头的 URL属于此资源
                     .requestMatchers().antMatchers("/unity/**")
                     .and()
                     .authorizeRequests()
@@ -73,7 +77,11 @@ public class OAuth2ServerConfiguration {
 
     }
 
-    // mobile resource
+
+    /**
+     * // mobile resource
+     * MOBILE 资源的访问权限配置
+     */
     @Configuration
     @EnableResourceServer
     protected static class MobileResourceServerConfiguration extends ResourceServerConfigurerAdapter {
@@ -90,6 +98,7 @@ public class OAuth2ServerConfiguration {
                     // session creation to be allowed (it's disabled by default in 2.0.6)
                     .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                     .and()
+                    // 所有以 /m/  开头的 URL属于此资源
                     .requestMatchers().antMatchers("/m/**")
                     .and()
                     .authorizeRequests()
@@ -179,6 +188,7 @@ public class OAuth2ServerConfiguration {
 
         @Override
         public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+            // real 值可自定义
             oauthServer.realm("spring-oauth-server")
                     // 支持 client_credentials 的配置
                     .allowFormAuthenticationForClients();

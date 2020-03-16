@@ -2,7 +2,7 @@
 
 使用的主要技术与版本号
 *Spring-Boot (2.0.2.RELEASE)
-*spring-security-oauth2 (2.3.0.RELEASE)
+*spring-security-oauth2 (2.3.5.RELEASE)
 
 
 如何使用?

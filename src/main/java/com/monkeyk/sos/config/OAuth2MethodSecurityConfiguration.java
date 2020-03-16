@@ -9,6 +9,8 @@ import org.springframework.security.oauth2.provider.expression.OAuth2MethodSecur
 /**
  * 2018/3/22
  *
+ * 此配置用于启用 #oauth2 表达式，如：#oauth2.hasScope('read')
+ *
  * @author Shengzhao Li
  */
 @Configuration
