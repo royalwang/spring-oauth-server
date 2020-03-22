@@ -45,7 +45,7 @@ public class OauthRepositoryJdbc implements OauthRepository {
 
     @Override
     public List<OauthClientDetails> findAllOauthClientDetails() {
-        final String sql = " select * from oauth_client_details order by create_time desc ";
+        final String sql = " select * from oauth_client_details where archived = 0  order by create_time desc ";
         return this.jdbcTemplate.query(sql, oauthClientDetailsRowMapper);
     }
 
