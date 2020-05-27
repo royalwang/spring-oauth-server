@@ -80,7 +80,7 @@ Base on Spring-Boot
 <hr/>
 <strong>grant_type</strong>
 <br/>
-说明Oauth支持的grant_type(授权方式)与功能
+说明OAuth2支持的grant_type(授权方式)与功能
 <ol>
     <li><code>authorization_code</code> -- 授权码模式(即先登录获取code,再获取token)</li>
     <li><code>password</code> -- 密码模式(将用户名,密码传过去,直接获取token)</li>
@@ -132,7 +132,7 @@ Base on Spring-Boot
         <code>自定义 grant_type</code>, 默认情况支持的grant_type包括 [password,authorization_code,refresh_token,implicit], 若不需要其中的某些grant_type,
         则可以修改 oauth_client_details 表中的 authorized_grant_types 字段的值;
         <br/>
-        若想把整个Oauth服务修改来只支持某些grant_type, 请修改 <i>security.xml</i>文件中的
+        若想把整个OAuth2服务修改来只支持某些grant_type, 请修改 <i>security.xml</i>文件中的
         <label>oauth2:authorization-server</label> 中的内容,将对应的 grant_type 注释或删掉即可
     </li>
     <li>
@@ -346,7 +346,7 @@ Base on Spring-Boot
 
 <hr/>
 <strong>更多资源</strong>
-<p>以下是在学习工作中收集的更多关于Oauth的资源,对深入理解与运用Oauth有帮助</p>
+<p>以下是在学习工作中收集的更多关于Oauth的资源,对深入理解与运用OAuth2有帮助</p>
 <ul>
        <li>
             <p>
@@ -360,12 +360,12 @@ Base on Spring-Boot
        </li>
        <li>
             <p>
-                <a href="http://netment.iteye.com/blog/945402">OAUTH2核心参数说明</a>, 重点介绍了grant_type 与 response_type 以及示例
+                <a href="http://netment.iteye.com/blog/945402">OAuth2核心参数说明</a>, 重点介绍了grant_type 与 response_type 以及示例
             </p>
        </li>
        <li>
             <p>
-                <a href="http://apiwiki.poken.com/authentication/oauth2">OAuth2 flows</a>, 详细介绍Oauth2的流程,各类错误发生时的响应
+                <a href="http://apiwiki.poken.com/authentication/oauth2">OAuth2 flows</a>, 详细介绍OAuth2的流程,各类错误发生时的响应
             </p>
        </li>
        <li>
@@ -375,7 +375,7 @@ Base on Spring-Boot
        </li>
        <li>
             <p>
-                <a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html">理解OAuth 2.0</a>, 介绍Oauth2各类grant_type的使用
+                <a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html">理解OAuth 2.0</a>, 介绍OAuth2各类grant_type的使用
             </p>
        </li>
        <li>
@@ -385,7 +385,7 @@ Base on Spring-Boot
        </li>
        <li>
             <p>
-                <a href="http://oltu.apache.org/">Apache Oltu</a>, Java版的 Oauth参考实现, 建议去了解了解
+                <a href="http://oltu.apache.org/">Apache Oltu</a>, Java版的 OAuth2参考实现, 建议去了解了解
             </p>
        </li>
        <li>
@@ -403,17 +403,22 @@ Base on Spring-Boot
                 <a href="http://andaily.com/blog/?p=19793">如何通过代码生成AccessToken</a>
             </p>
        </li>
+       <li>
+            <p>
+                <a href="http://andaily.com/blog/?p=19884">OAuth2中 access_token，refresh_token的各类配置与使用场景FAQ</a>
+            </p>       
+       </li>
 </ul>
 
 
 <hr/>
 <h4>
-    与项目相关的技术文章请访问 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a> (不断更新与Oauth相关的文章)
+    与项目相关的技术文章请访问 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a> (不断更新与OAuth2相关的文章)
 </h4>
 <p>
     <strong>问答与讨论</strong>
     <br/>
-    与项目相关的，与Oauth相关的问题与回答，以及各类讨论请访问<br/>
+    与项目相关的，与OAuth2相关的问题与回答，以及各类讨论请访问<br/>
     <a href="http://andaily.com/blog/?dwqa-question_category=oauth">http://andaily.com/blog/?dwqa-question_category=oauth</a>
 </p>
 
