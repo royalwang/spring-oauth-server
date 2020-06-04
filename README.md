@@ -15,7 +15,7 @@ Base on Spring-Boot
 <ol>
  <li>JDK (1.8.0_40)</li>
  <li>Servlet (3.1.0)</li>
- <li>Spring Boot(2.0.2.RELEASE)</li>
+ <li>Spring Boot(2.1.4.RELEASE)</li>
 </ol>
 <h4>技术视频</h4>
 <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
@@ -172,6 +172,7 @@ Base on Spring-Boot
             <ol>
                 <li><p><del>Fix CVE-2019-3778, use spring-security-oauth 2.3.5.RELEASE</del></p></li>             
                 <li><p><del>解决数据库多条 access_token问题，增加唯一约束</del></p></li>             
+                <li><p><del>升级Spring-Boot版本为2.1.4.RELEASE</del></p></li>             
             </ol>
             <br/>
        </li>  
