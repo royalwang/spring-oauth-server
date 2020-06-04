@@ -341,6 +341,7 @@ Base on Spring-Boot
         <li><p><em>2018-05-01</em>        开始 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">2.0.1</a> 分支开发</p></li>
         <li><p><em>2019-07-04</em>        Add Redis <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">config</a> branch</p></li>
         <li><p><em>2019-08-04</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.1/">2.0.1</a> 版本</p></p></li>
+        <li><p><em>2020-06-04</em>        发布 2.0.2 版本</p></p></li>
     </ol>
 </p>
 
