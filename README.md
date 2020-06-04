@@ -162,7 +162,18 @@ Base on Spring-Boot
 <br/>
 项目的开发管理使用开源项目 <a href="https://gitee.com/mkk/andaily-developer">andaily-developer</a>.
 </p>
-<ul>     
+<ul>    
+	   <li>
+            <p>
+                Version: <strong>2.1.0</strong> [pending]
+                <br/>
+                Date: 2020-06-05 / ---
+            </p>
+            <ol>
+                <li><p>升级access_token, refresh_token为JWT(Json Web Token), 提高性能</p></li>                        
+            </ol>
+            <br/>
+       </li>   
 	   <li>
             <p>
                 Version: <strong>2.0.2</strong> [finished]
