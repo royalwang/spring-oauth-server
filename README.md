@@ -165,9 +165,9 @@ Base on Spring-Boot
 <ul>     
 	   <li>
             <p>
-                Version: <strong>2.0.2</strong> [planning]
+                Version: <strong>2.0.2</strong> [finished]
                 <br/>
-                Date: 2019-08-05 / ---
+                Date: 2019-08-05 / 2020-06-04
             </p>
             <ol>
                 <li><p><del>Fix CVE-2019-3778, use spring-security-oauth 2.3.5.RELEASE</del></p></li>             
