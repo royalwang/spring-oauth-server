@@ -348,7 +348,7 @@ Base on Spring-Boot
 
 <hr/>
 <strong>更多资源</strong>
-<p>以下是在学习工作中收集的更多关于Oauth的资源,对深入理解与运用OAuth2有帮助</p>
+<p>以下是在学习工作中收集的更多关于OAuth2的资源,对深入理解与运用OAuth2有帮助</p>
 <ul>
        <li>
             <p>

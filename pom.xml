@@ -9,7 +9,7 @@
     <packaging>war</packaging>
 
     <name>${project.artifactId}</name>
-    <description>Spring Oauth Server (Spring Boot)</description>
+    <description>Spring OAuth Server (Spring Boot)</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
