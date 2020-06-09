@@ -25,7 +25,7 @@
     </p>
 
     <div ng-controller="TestClientCtrl">
-        <div>
+        <div class="well well-sm">
             请先输入client_secret: <input type="text" value="" placeholder="client_secret" ng-model="clientSecret"
                                       size="100" required="required"/>
         </div>
