@@ -19,6 +19,9 @@ import org.springframework.util.Assert;
 public class SOSContextHolder implements BeanFactoryAware, InitializingBean {
 
 
+    /**
+     * @since 2.1.0
+     */
     private static BeanFactory beanFactory;
 
 
