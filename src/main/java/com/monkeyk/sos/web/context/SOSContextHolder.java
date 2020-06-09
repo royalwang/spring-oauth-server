@@ -1,9 +1,9 @@
 package com.monkeyk.sos.web.context;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.util.Assert;
 
 /**
@@ -11,36 +11,24 @@ import org.springframework.util.Assert;
  * <p>
  * <p>
  * Spring ApplicationContext Holder,
- * get Spring bean from ApplicationContext
+ * get Spring bean from beanFactory
  *
  * @author Shengzhao Li
  * @since 2.0.1
  */
-public class SOSContextHolder implements ApplicationContextAware, InitializingBean {
+public class SOSContextHolder implements BeanFactoryAware, InitializingBean {
 
 
-    private static ApplicationContext applicationContext;
+    private static BeanFactory beanFactory;
 
 
     public SOSContextHolder() {
     }
 
+
     @Override
-    public void setApplicationContext(ApplicationContext context) throws BeansException {
-        SOSContextHolder.applicationContext = context;
-    }
-
-
-    /**
-     * Retrieves the {@code ApplicationContext} set when Spring created and initialized the holder bean. If the
-     * holder has not been created (see the class documentation for details on how to wire up the holder), or if
-     * the holder has not been initialized, this accessor may return {@code null}.
-     * <p/>
-     *
-     * @return the set context, or {@code null} if the holder bean has not been initialized
-     */
-    public static ApplicationContext getApplicationContext() {
-        return applicationContext;
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        SOSContextHolder.beanFactory = beanFactory;
     }
 
 
@@ -52,10 +40,10 @@ public class SOSContextHolder implements ApplicationContextAware, InitializingBe
      * @return Bean instance
      */
     public static <T> T getBean(Class<T> clazz) {
-        if (applicationContext == null) {
-            throw new IllegalStateException("applicationContext is null");
+        if (beanFactory == null) {
+            throw new IllegalStateException("beanFactory is null");
         }
-        return applicationContext.getBean(clazz);
+        return beanFactory.getBean(clazz);
     }
 
 
@@ -68,15 +56,16 @@ public class SOSContextHolder implements ApplicationContextAware, InitializingBe
      */
     @SuppressWarnings("unchecked")
     public static <T> T getBean(String beanId) {
-        if (applicationContext == null) {
-            throw new IllegalStateException("applicationContext is null");
+        if (beanFactory == null) {
+            throw new IllegalStateException("beanFactory is null");
         }
-        return (T) applicationContext.getBean(beanId);
+        return (T) beanFactory.getBean(beanId);
     }
 
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        Assert.notNull(applicationContext, "applicationContext is null");
+        Assert.notNull(beanFactory, "beanFactory is null");
     }
+
 }
