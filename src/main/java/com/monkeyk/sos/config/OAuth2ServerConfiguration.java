@@ -26,8 +26,8 @@ import org.springframework.security.oauth2.provider.approval.UserApprovalHandler
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestFactory;
+import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
 import javax.sql.DataSource;
 
@@ -116,6 +116,9 @@ public class OAuth2ServerConfiguration {
         @Autowired
         private TokenStore tokenStore;
 
+        @Autowired
+        private DefaultTokenServices tokenServices;
+
 
         @Autowired
         private ClientDetailsService clientDetailsService;
@@ -145,13 +148,13 @@ public class OAuth2ServerConfiguration {
         }
 
 
-        /*
-         * JDBC TokenStore
-         */
-        @Bean
-        public TokenStore tokenStore(DataSource dataSource) {
-            return new JdbcTokenStore(dataSource);
-        }
+//        /*
+//         * JDBC TokenStore
+//         */
+//        @Bean
+//        public TokenStore tokenStore(DataSource dataSource) {
+//            return new JdbcTokenStore(dataSource);
+//        }
 
         /*
          * Redis TokenStore (有Redis场景时使用)
@@ -179,7 +182,8 @@ public class OAuth2ServerConfiguration {
 
         @Override
         public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-            endpoints.tokenStore(tokenStore)
+            endpoints.tokenServices(tokenServices)
+                    .tokenStore(tokenStore)
                     .authorizationCodeServices(authorizationCodeServices)
                     .userDetailsService(userDetailsService)
                     .userApprovalHandler(userApprovalHandler())

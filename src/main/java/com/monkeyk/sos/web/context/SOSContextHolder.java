@@ -1,9 +1,13 @@
 package com.monkeyk.sos.web.context;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.util.Assert;
 
 /**
@@ -18,11 +22,19 @@ import org.springframework.util.Assert;
  */
 public class SOSContextHolder implements BeanFactoryAware, InitializingBean {
 
+    private static final Logger LOG = LoggerFactory.getLogger(SOSContextHolder.class);
 
     /**
      * @since 2.1.0
      */
     private static BeanFactory beanFactory;
+
+
+    /**
+     * @since 2.1.0
+     */
+    @Value("${spring.application.name:spring-oauth-server}")
+    private String applicationName;
 
 
     public SOSContextHolder() {
@@ -69,6 +81,11 @@ public class SOSContextHolder implements BeanFactoryAware, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         Assert.notNull(beanFactory, "beanFactory is null");
+
+        if (LOG.isDebugEnabled()) {
+            TokenStore tokenStore = getBean(TokenStore.class);
+            LOG.debug("{} use tokenStore: {}", this.applicationName, tokenStore);
+        }
     }
 
 }
