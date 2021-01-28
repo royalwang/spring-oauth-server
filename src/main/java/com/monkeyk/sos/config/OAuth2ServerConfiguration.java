@@ -147,6 +147,7 @@ public class OAuth2ServerConfiguration {
 
         /*
          * Redis TokenStore
+         * 提示: 框架提供的 RedisTokenStore 只支持单机版本Redis，尚不支持集群版本Redis
          */
         @Bean
         public TokenStore tokenStore(RedisConnectionFactory connectionFactory) {
