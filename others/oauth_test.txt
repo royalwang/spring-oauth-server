@@ -12,11 +12,11 @@ http://localhost:8080/spring-oauth-server/oauth/authorize?client_id=mobile-clien
 响应的URL如:
 http://localhost:8080/spring-oauth-server/unity/dashboard?code=hGQ8qx
 
-通过code换取access_token [POST]
+通过code换取access_token [POST]  (注意：这一步用httpclient在程序中调用，不要在浏览器中)
 http://localhost:8080/spring-oauth-server/oauth/token?client_id=unity-client&client_secret=unity&grant_type=authorization_code&code=hGQ8qx&redirect_uri=http%3a%2f%2flocalhost%3a8080%2fspring-oauth-server%2funity%2fdashboard
 
 
-方式2:基于客户端  (注意参数中的username,password,对应用户的账号,密码) [POST]
+方式2:基于客户端  (注意参数中的username,password,对应用户的账号,密码) [POST] (注意：这一步用httpclient在程序中调用，不要在浏览器中)
 http://localhost:8080/spring-oauth-server/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=password&scope=read&username=mobile&password=mobile
 
 说明:由于unity-client不支持password,所以若用unity-client通过password方式去授权,将返回 invalid_client
@@ -33,11 +33,11 @@ http://localhost:8080/spring-oauth-server/unity/dashboard?access_token=89767569-
 
 
 
-刷新access_token [POST]
+刷新access_token [POST] (注意：这一步用httpclient在程序中调用，不要在浏览器中)
 http://localhost:8080/spring-oauth-server/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=refresh_token&refresh_token=b36f4978-a172-4aa8-af89-60f58abe3ba1
 
 
-Restful OAuth2 Test [POST]
+Restful OAuth2 Test [POST] (注意：这一步用httpclient在程序中调用，不要在浏览器中)
 URL: /oauth/rest_token
 ContentType: application/json
 
