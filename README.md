@@ -466,11 +466,9 @@ Base on Spring-Boot
 <p>
  关注更多开源项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
 </p>
+
 <p>
- 若需更多的技术支持请联系 <a href="mailto:monkeyk@shengzhaoli.com">monkeyk@shengzhaoli.com</a>
-</p>
-<p>
- <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
+ <em>欢迎联系作者 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a> 进行探讨</em>
 </p>
 
 <hr/>
