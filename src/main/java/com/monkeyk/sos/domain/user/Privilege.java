@@ -8,6 +8,6 @@ public enum Privilege {
     USER,          //Default privilege
 
     ADMIN,     //admin
-    UNITY,
-    MOBILE
+    UNITY,    //资源权限：UNITY
+    MOBILE    //资源权限：MOBILE
 }

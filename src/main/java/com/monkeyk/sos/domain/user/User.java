@@ -16,7 +16,15 @@ public class User extends AbstractDomain {
     private static final long serialVersionUID = -2921689304753120556L;
 
 
+    /**
+     * 用户名，唯一
+     */
     private String username;
+
+    /**
+     * 密码，加密存储
+     * BCrypt  加密
+     */
     private String password;
 
     private String phone;
@@ -24,8 +32,14 @@ public class User extends AbstractDomain {
     //Default user is initial when create database, do not delete
     private boolean defaultUser = false;
 
+    /**
+     * 最后登录时间
+     */
     private Date lastLoginTime;
 
+    /**
+     * 权限值
+     */
     private List<Privilege> privileges = new ArrayList<>();
 
     public User() {

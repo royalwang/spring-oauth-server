@@ -13,7 +13,14 @@ public class OauthClientDetails implements Serializable {
 
     private static final long serialVersionUID = -6947822646185526939L;
 
+    /**
+     * 创建时间，系统管理
+     */
     private LocalDateTime createTime = DateUtils.now();
+
+    /**
+     * 逻辑删除标识：true表示已经删除，默认false
+     */
     private boolean archived = false;
 
     private String clientId;
