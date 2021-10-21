@@ -31,6 +31,8 @@ public class JWTTokenStoreConfiguration {
 
 
     /**
+     * 不同的系统用不同的jwtKey；不推荐共用一样的
+     *
      * HMAC key, default: IH6S2dhCEMwGr7uE4fBakSuDh9SoIrRa
      * alg: HMACSHA256
      */
