@@ -15,6 +15,8 @@ import javax.sql.DataSource;
  * <p>
  * <p>
  * JDBC TokenStore config
+ * 使用时配置参数
+ * <pre>sos.token.store=jdbc</pre>   (默认)
  *
  * @author Shengzhao Li
  * @since 2.1.0

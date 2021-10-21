@@ -19,6 +19,9 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
  * <p>
  * JWT TokenStore config
  *
+ * 使用时配置参数
+ * <pre>sos.token.store=jwt</pre>
+ *
  * @author Shengzhao Li
  * @since 2.1.0
  */
