@@ -12,23 +12,23 @@
 package com.monkeyk.sos.infrastructure;
 
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 /*
   * @author Shengzhao Li
   */
-public class DateUtilsTest {
+class DateUtilsTest {
 
 
     @Test
-    public void convert() {
+    void convert() {
 
         LocalDateTime localDateTime = LocalDateTime.of(2015, 4, 3, 12, 30, 22);
 
@@ -41,7 +41,7 @@ public class DateUtilsTest {
 
 
         final String text = DateUtils.toDateTime(localDateTime);
-        assertEquals(text,"2015-04-03 12:30:22");
+        assertEquals(text, "2015-04-03 12:30:22");
 
     }
 

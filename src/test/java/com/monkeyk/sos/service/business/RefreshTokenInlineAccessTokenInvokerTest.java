@@ -1,24 +1,25 @@
 package com.monkeyk.sos.service.business;
 
 import com.monkeyk.sos.service.dto.AccessTokenDto;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.security.oauth2.common.exceptions.InvalidGrantException;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  * 2019/7/6
  *
  * @author Shengzhao Li
  */
-public class RefreshTokenInlineAccessTokenInvokerTest extends AbstractInlineAccessTokenInvokerTest {
+class RefreshTokenInlineAccessTokenInvokerTest extends AbstractInlineAccessTokenInvokerTest {
 
 
     @Test
-    public void invokeNormal() {
+    void invokeNormal() {
 
         createClientDetails();
 
@@ -62,8 +63,9 @@ public class RefreshTokenInlineAccessTokenInvokerTest extends AbstractInlineAcce
     }
 
 
-    @Test(expected = InvalidGrantException.class)
-    public void invalidRefreshToken() {
+    //    @Test(expected = InvalidGrantException.class)
+    @Test
+    void invalidRefreshToken() {
 
         createClientDetails();
 

@@ -14,19 +14,20 @@ package com.monkeyk.sos.infrastructure.jdbc;
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
 import com.monkeyk.sos.infrastructure.AbstractRepositoryTest;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 /*
   * @author Shengzhao Li
   */
-public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
+class UserRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Autowired
@@ -34,7 +35,7 @@ public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Test
-    public void findByGuid() {
+    void findByGuid() {
         User user = userRepository.findByGuid("oood");
         assertNull(user);
 
@@ -49,7 +50,7 @@ public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
     }
 
     @Test
-    public void findUsersByUsername() {
+    void findUsersByUsername() {
         User user = userRepository.findByGuid("oood");
         assertNull(user);
 
@@ -65,7 +66,7 @@ public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Test
-    public void updateUser() {
+    void updateUser() {
         User user = new User("user", "123", "123", "ewo@honyee.cc");
         userRepository.saveUser(user);
 
@@ -84,7 +85,7 @@ public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Test
-    public void findByUsername() {
+    void findByUsername() {
         String username = "user";
         User user = new User(username, "123", "123", "ewo@honyee.cc");
         userRepository.saveUser(user);
@@ -98,7 +99,7 @@ public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
     * Run the test must initial db firstly
     * */
 //    @Test()
-    public void testPrivilege() {
+    void testPrivilege() {
 
         String guid = "55b713df1c6f423e842ad68668523c49";
         final User user = userRepository.findByGuid(guid);

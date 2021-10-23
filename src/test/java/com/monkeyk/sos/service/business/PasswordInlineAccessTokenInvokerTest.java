@@ -1,25 +1,25 @@
 package com.monkeyk.sos.service.business;
 
 import com.monkeyk.sos.service.dto.AccessTokenDto;
-import org.junit.Test;
-import org.springframework.security.oauth2.common.exceptions.InvalidGrantException;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 
 /**
  * 2019/7/6
  *
  * @author Shengzhao Li
  */
-public class PasswordInlineAccessTokenInvokerTest extends AbstractInlineAccessTokenInvokerTest {
+ class PasswordInlineAccessTokenInvokerTest extends AbstractInlineAccessTokenInvokerTest {
 
 
     @Test
-    public void invokeNormal() {
+     void invokeNormal() {
 
         createClientDetails();
 
@@ -46,8 +46,9 @@ public class PasswordInlineAccessTokenInvokerTest extends AbstractInlineAccessTo
     }
 
 
-    @Test(expected = InvalidGrantException.class)
-    public void invalidUsername() {
+//    @Test(expected = InvalidGrantException.class)
+    @Test
+     void invalidUsername() {
 
         createClientDetails();
 
@@ -70,8 +71,9 @@ public class PasswordInlineAccessTokenInvokerTest extends AbstractInlineAccessTo
     }
 
 
-    @Test(expected = IllegalStateException.class)
-    public void invalidScope() {
+//    @Test(expected = IllegalStateException.class)
+    @Test
+     void invalidScope() {
 
         createClientDetails();
         createUser();

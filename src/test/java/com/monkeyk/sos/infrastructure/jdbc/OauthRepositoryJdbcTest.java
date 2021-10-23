@@ -15,19 +15,19 @@ import com.monkeyk.sos.domain.oauth.OauthClientDetails;
 import com.monkeyk.sos.domain.oauth.OauthRepository;
 import com.monkeyk.sos.domain.shared.GuidGenerator;
 import com.monkeyk.sos.infrastructure.AbstractRepositoryTest;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 /*
   * @author Shengzhao Li
   */
-public class OauthRepositoryJdbcTest extends AbstractRepositoryTest {
+class OauthRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Autowired
@@ -35,7 +35,7 @@ public class OauthRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Test
-    public void findOauthClientDetails() {
+    void findOauthClientDetails() {
         OauthClientDetails oauthClientDetails = oauthRepositoryMyBatis.findOauthClientDetails("unity-client");
         assertNull(oauthClientDetails);
 
@@ -43,7 +43,7 @@ public class OauthRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Test
-    public void saveOauthClientDetails() {
+    void saveOauthClientDetails() {
 
         final String clientId = GuidGenerator.generate();
 
@@ -58,14 +58,14 @@ public class OauthRepositoryJdbcTest extends AbstractRepositoryTest {
     }
 
     @Test
-    public void findAllOauthClientDetails() {
+    void findAllOauthClientDetails() {
         final List<OauthClientDetails> allOauthClientDetails = oauthRepositoryMyBatis.findAllOauthClientDetails();
         assertNotNull(allOauthClientDetails);
         assertTrue(allOauthClientDetails.isEmpty());
     }
 
     @Test
-    public void updateOauthClientDetailsArchive() {
+    void updateOauthClientDetailsArchive() {
         oauthRepositoryMyBatis.updateOauthClientDetailsArchive("ddooelddd", true);
     }
 

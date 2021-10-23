@@ -1,12 +1,14 @@
 package com.monkeyk.sos.config;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.springframework.security.oauth2.common.util.RandomValueStringGenerator;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  * 2020/6/9
@@ -14,11 +16,11 @@ import static org.junit.Assert.*;
  * @author Shengzhao Li
  * @since 2.1.0
  */
-public class JWTTokenStoreConfigurationTest {
+class JWTTokenStoreConfigurationTest {
 
 
     @Test
-    public void keyTest() throws Exception {
+    void keyTest() throws Exception {
 
         RandomValueStringGenerator randomValueStringGenerator = new RandomValueStringGenerator(32);
         String verifierKey = randomValueStringGenerator.generate();
@@ -29,7 +31,7 @@ public class JWTTokenStoreConfigurationTest {
 
 
     @Test
-    public void testJwtAccessTokenConverter() throws Exception {
+    void testJwtAccessTokenConverter() throws Exception {
 
         JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
         jwtAccessTokenConverter.setSigningKey("IH6S2dhCEMwGr7uE4fBakSuDh9SoIrRa");

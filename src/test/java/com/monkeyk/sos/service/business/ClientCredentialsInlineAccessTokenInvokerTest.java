@@ -1,13 +1,14 @@
 package com.monkeyk.sos.service.business;
 
 import com.monkeyk.sos.service.dto.AccessTokenDto;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.security.oauth2.provider.NoSuchClientException;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  * 2019/7/6
@@ -39,8 +40,9 @@ public class ClientCredentialsInlineAccessTokenInvokerTest extends AbstractInlin
 
     }
 
-    @Test(expected = NoSuchClientException.class)
-    public void invalidClientId() {
+//    @Test(expected = NoSuchClientException.class)
+    @Test()
+     void invalidClientId() {
 
         createClientDetails();
 
@@ -62,7 +64,7 @@ public class ClientCredentialsInlineAccessTokenInvokerTest extends AbstractInlin
     }
 
     @Test()
-    public void invalidClientSecret() {
+     void invalidClientSecret() {
 
         createClientDetails();
 
