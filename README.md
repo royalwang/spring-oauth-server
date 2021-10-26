@@ -165,12 +165,23 @@ Base on Spring-Boot
 <ul>    
 	   <li>
             <p>
-                Version: <strong>2.1.0</strong> [pending]
+                Version: <strong>2.1.1</strong> [pending]
                 <br/>
-                Date: 2020-06-05 / ---
+                Date: 2021-10-23 / ---
             </p>
             <ol>
-                <li><p>升级access_token, refresh_token为JWT(Json Web Token), 提高性能</p></li>                        
+                <li><p>升级spring-boot v2.4.2，改变工程结构为jar模式</p></li>                        
+            </ol>
+            <br/>
+       </li> 
+	   <li>
+            <p>
+                Version: <strong>2.1.0</strong> [finished]
+                <br/>
+                Date: 2020-06-05 / 2021-07-13
+            </p>
+            <ol>
+                <li><p><del>升级access_token, refresh_token为JWT(Json Web Token), 提高性能</del></p></li>                        
                 <li><p><del>升级spring-security oauth2版本为2.3.8.RELEASE, 增加spring-security-jwt版本1.1.1.RELEASE</del></p></li>                        
             </ol>
             <br/>
