@@ -36,7 +36,7 @@ web_server_redirect_uri,authorities, access_token_validity,
 refresh_token_validity, additional_information, create_time, archived, trusted)
 values
 ('unity-client','sos-resource', '$2a$10$QQTKDdNfj9sPjak6c8oWaumvTsa10MxOBOV6BW3DvLWU6VrjDfDam', 'read','authorization_code,refresh_token,implicit',
-'http://localhost:8080/spring-oauth-server/unity/dashboard','ROLE_CLIENT',null,
+'http://localhost:8080/unity/dashboard','ROLE_CLIENT',null,
 null,null, now(), 0, 0),
 ('mobile-client','sos-resource', '$2a$10$uLvpxfvm3CuUyjIvYq7a9OUmd9b3tHFKrUaMyU/jC01thrTdkBDVm', 'read','password,refresh_token',
 null,'ROLE_CLIENT',null,

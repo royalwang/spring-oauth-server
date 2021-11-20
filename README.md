@@ -65,13 +65,14 @@ Base on Spring-Boot
 <li>
 将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servlet运行服务器), 并启动Tomcat(默认端口为8080);
 <br/>
-注意将项目的 contextPath(根路径) 设置为 'spring-oauth-server'.
-<br/>
    另: 也可通过maven package命令将项目编译为war文件(spring-oauth-server.war),
-         将war放在Tomcat中并启动(注意: 这种方式需要将application.properties加入到classpath中并正确配置数据库连接信息).
+         将war放在Tomcat中并启动
+          或使用命令 java -jar spring-oauth-server.war
+          (若要使用自定义的properties则使用 java -jar spring-oauth-server.war  --spring.config.location=application.properties)
+
 </li>
 <li>
-参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
+参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/config/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
 </li>
 </ol>
 </p>
