@@ -170,7 +170,7 @@ Base on Spring-Boot
                 Date: 2021-10-23 / ---
             </p>
             <ol>
-                <li><p>升级spring-boot v2.4.2，改变工程结构为jar模式</p></li>                        
+                <li><p>升级spring-boot v2.4.2，改变可直接运行 SpringOauthServerApplication.java</p></li>                        
             </ol>
             <br/>
        </li> 
