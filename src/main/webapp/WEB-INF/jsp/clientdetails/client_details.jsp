@@ -76,7 +76,7 @@
     <p class="help-block">
         每一个item对应<code>oauth_client_details</code>表中的一条数据; 共<strong>${fun:length(clientDetailsDtoList)}</strong>条数据.
         <br/>
-        对spring-oauth-server数据库表的详细说明请访问项目<em>others</em>目录的<em>db_table_description.html</em>文件
+        对spring-oauth-server数据库表的详细说明请访问项目<mark>others</mark>目录的<mark>db_table_description.html</mark>文件
     </p>
 </div>
 </body>
