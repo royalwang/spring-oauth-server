@@ -1,5 +1,9 @@
 最后更新：2021-11-20
 
+
+从v2.1.x版本开始，推荐使用 admin账号登录系统后在界面进行测试。
+
+
 方式1:基于浏览器  (访问时后跳到登录页面,登录成功后跳转到redirect_uri指定的地址) [GET]
 说明:只能使用admin或unity 账号登录才能有权限访问,若使用mobile账号登录将返回Access is denied
 http://localhost:8080/oauth/authorize?client_id=unity-client&redirect_uri=http%3a%2f%2flocalhost%3a8080%2funity%2fdashboard&response_type=code&scope=read
@@ -26,11 +30,10 @@ http://localhost:8080/oauth/token?client_id=unity-client&client_secret=unity&gra
 
 
 获取access_token响应的数据如:
-{"access_token":"3420d0e0-ed77-45e1-8370-2b55af0a62e8","token_type":"bearer","refresh_token":"b36f4978-a172-4aa8-af89-60f58abe3ba1","expires_in":43199,"scope":"read write"}
-
+{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic29zLXJlc291cmNlIl0sImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNjM3NDY0NTY3LCJhdXRob3JpdGllcyI6WyJST0xFX01PQklMRSIsIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiLCJST0xFX1VOSVRZIl0sImp0aSI6IjBkOWRjN2M2LTJlODEtNDE3MS1iZjg2LWU1MzE2YmJhN2VmYiIsImNsaWVudF9pZCI6InVuaXR5LWNsaWVudCJ9._Jy_h_KIlK-eWWs1EH6_sdjhSon2QlX3dQrh4BZcx3k","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic29zLXJlc291cmNlIl0sImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiMGQ5ZGM3YzYtMmU4MS00MTcxLWJmODYtZTUzMTZiYmE3ZWZiIiwiZXhwIjoxNjQwMDEzMzY3LCJhdXRob3JpdGllcyI6WyJST0xFX01PQklMRSIsIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiLCJST0xFX1VOSVRZIl0sImp0aSI6IjZlNDAwODI5LTM2NmEtNGNjZi1hMTI4LWJkNmQzZjdkNTk3NSIsImNsaWVudF9pZCI6InVuaXR5LWNsaWVudCJ9.dTo_hC7vm54NNySEEexzPld6uFypAzI0McyjXH-ucG0","expires_in":43199,"scope":"read","jti":"0d9dc7c6-2e81-4171-bf86-e5316bba7efb"}
 
 获取access_token后访问资源 [GET]
-http://localhost:8080/unity/dashboard?access_token=89767569-5b78-4b26-ae2d-d361aa3e6bf9
+http://localhost:8080/unity/dashboard?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic29...
 
 
 
