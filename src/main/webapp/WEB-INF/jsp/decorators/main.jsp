@@ -34,7 +34,7 @@
         <hr/>
         <p class="text-center text-muted">
             &copy; 2013 - 2021 <a href="https://gitee.com/shengzhao/spring-oauth-server" target="_blank">spring-oauth-server</a>.
-            V${mainVersion}
+            v${mainVersion}
         </p>
     </div>
 </div>
