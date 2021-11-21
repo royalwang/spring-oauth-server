@@ -1,9 +1,11 @@
 package com.monkeyk.sos.service.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.apache.commons.lang.StringUtils;
-import org.springframework.security.oauth2.common.OAuth2AccessToken;
-import org.springframework.security.oauth2.common.OAuth2RefreshToken;
+//import org.apache.commons.lang.StringUtils;
+//import org.springframework.security.oauth2.core.OAuth2AccessToken;
+//import org.springframework.security.oauth2.core.OAuth2RefreshToken;
+//import org.springframework.security.oauth2.common.OAuth2AccessToken;
+//import org.springframework.security.oauth2.common.OAuth2RefreshToken;
 
 import java.io.Serializable;
 
@@ -39,18 +41,18 @@ public class AccessTokenDto implements Serializable {
     }
 
 
-    public AccessTokenDto(OAuth2AccessToken token) {
-        this.accessToken = token.getValue();
-        this.expiresIn = token.getExpiresIn();
-
-        this.scope = StringUtils.join(token.getScope(), ",");
-        this.tokenType = token.getTokenType();
-
-        final OAuth2RefreshToken oAuth2RefreshToken = token.getRefreshToken();
-        if (oAuth2RefreshToken != null) {
-            this.refreshToken = oAuth2RefreshToken.getValue();
-        }
-    }
+//    public AccessTokenDto(OAuth2AccessToken token) {
+//        this.accessToken = token.getValue();
+//        this.expiresIn = token.getExpiresIn();
+//
+//        this.scope = StringUtils.join(token.getScope(), ",");
+//        this.tokenType = token.getTokenType();
+//
+//        final OAuth2RefreshToken oAuth2RefreshToken = token.getRefreshToken();
+//        if (oAuth2RefreshToken != null) {
+//            this.refreshToken = oAuth2RefreshToken.getValue();
+//        }
+//    }
 
 
     public String getAccessToken() {

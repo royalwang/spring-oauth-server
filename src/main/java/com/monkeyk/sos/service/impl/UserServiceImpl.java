@@ -1,28 +1,25 @@
 package com.monkeyk.sos.service.impl;
 
-import com.monkeyk.sos.service.dto.UserDto;
-import com.monkeyk.sos.service.dto.UserFormDto;
-import com.monkeyk.sos.service.dto.UserJsonDto;
-import com.monkeyk.sos.service.dto.UserOverviewDto;
 import com.monkeyk.sos.domain.shared.security.SOSUserDetails;
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
 import com.monkeyk.sos.service.UserService;
+import com.monkeyk.sos.service.dto.UserDto;
+import com.monkeyk.sos.service.dto.UserFormDto;
+import com.monkeyk.sos.service.dto.UserJsonDto;
+import com.monkeyk.sos.service.dto.UserOverviewDto;
 import com.monkeyk.sos.web.WebUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -55,13 +52,19 @@ public class UserServiceImpl implements UserService {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         final Object principal = authentication.getPrincipal();
 
-        if (authentication instanceof OAuth2Authentication &&
+       /* if (authentication instanceof OAuth2Authentication &&
                 (principal instanceof String || principal instanceof org.springframework.security.core.userdetails.User)) {
             return loadOauthUserJsonDto((OAuth2Authentication) authentication);
-        } else {
+        } else {*/
+        if (principal instanceof SOSUserDetails) {
             final SOSUserDetails userDetails = (SOSUserDetails) principal;
             return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
         }
+//        }
+        if (LOG.isWarnEnabled()) {
+            LOG.warn("{}|Unknown principal: {}, please checking, return null", WebUtils.getIp(), principal);
+        }
+        return null;
     }
 
     @Override
@@ -89,15 +92,15 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    private UserJsonDto loadOauthUserJsonDto(OAuth2Authentication oAuth2Authentication) {
-        UserJsonDto userJsonDto = new UserJsonDto();
-        userJsonDto.setUsername(oAuth2Authentication.getName());
-
-        final Collection<GrantedAuthority> authorities = oAuth2Authentication.getAuthorities();
-        for (GrantedAuthority authority : authorities) {
-            userJsonDto.getPrivileges().add(authority.getAuthority());
-        }
-
-        return userJsonDto;
-    }
+//    private UserJsonDto loadOauthUserJsonDto(OAuth2Authentication oAuth2Authentication) {
+//        UserJsonDto userJsonDto = new UserJsonDto();
+//        userJsonDto.setUsername(oAuth2Authentication.getName());
+//
+//        final Collection<GrantedAuthority> authorities = oAuth2Authentication.getAuthorities();
+//        for (GrantedAuthority authority : authorities) {
+//            userJsonDto.getPrivileges().add(authority.getAuthority());
+//        }
+//
+//        return userJsonDto;
+//    }
 }

@@ -16,6 +16,7 @@ Base on Spring-Boot
  <li>JDK (1.8.0_40)</li>
  <li>Servlet (3.1.0)</li>
  <li>Spring Boot(2.4.2)</li>
+ <li>spring-security-oauth2-authorization-server(0.2.0)</li>
 </ol>
 <h4>技术视频</h4>
 <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
@@ -172,6 +173,7 @@ Base on Spring-Boot
             </p>
             <ol>
                 <li><p>升级spring-boot v2.4.2，改变可直接运行 SpringOauthServerApplication.java</p></li>                        
+                <li><p>升级spring security oauth2为 spring-security-oauth2-authorization-server</p></li>                        
             </ol>
             <br/>
        </li> 

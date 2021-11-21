@@ -1,8 +1,8 @@
 package com.monkeyk.sos.service.business;
 
-import org.springframework.security.oauth2.provider.OAuth2RequestFactory;
-import org.springframework.security.oauth2.provider.TokenGranter;
-import org.springframework.security.oauth2.provider.client.ClientCredentialsTokenGranter;
+//import org.springframework.security.oauth2.provider.OAuth2RequestFactory;
+//import org.springframework.security.oauth2.provider.TokenGranter;
+//import org.springframework.security.oauth2.provider.client.ClientCredentialsTokenGranter;
 
 /**
  * 2019/7/5
@@ -12,6 +12,7 @@ import org.springframework.security.oauth2.provider.client.ClientCredentialsToke
  *
  * @author Shengzhao Li
  * @since 2.0.1
+ * @deprecated   use spring-security-oauth2-authorization-server replaced from v2.1.1
  */
 public class ClientCredentialsInlineAccessTokenInvoker extends InlineAccessTokenInvoker {
 
@@ -19,10 +20,10 @@ public class ClientCredentialsInlineAccessTokenInvoker extends InlineAccessToken
     public ClientCredentialsInlineAccessTokenInvoker() {
     }
 
-    @Override
-    protected TokenGranter getTokenGranter(OAuth2RequestFactory oAuth2RequestFactory) {
-        return new ClientCredentialsTokenGranter(this.tokenServices, this.clientDetailsService, oAuth2RequestFactory);
-    }
+//    @Override
+//    protected TokenGranter getTokenGranter(OAuth2RequestFactory oAuth2RequestFactory) {
+//        return new ClientCredentialsTokenGranter(this.tokenServices, this.clientDetailsService, oAuth2RequestFactory);
+//    }
 
 
 }

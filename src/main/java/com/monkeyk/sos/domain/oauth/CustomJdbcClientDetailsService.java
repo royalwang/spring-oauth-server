@@ -1,6 +1,6 @@
 package com.monkeyk.sos.domain.oauth;
 
-import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
+//import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 
 import javax.sql.DataSource;
 
@@ -8,8 +8,10 @@ import javax.sql.DataSource;
  * Add  <i>archived = 0</i> condition
  *
  * @author Shengzhao Li
+ * @deprecated   use spring-security-oauth2-authorization-server replaced from v2.1.1
  */
-public class CustomJdbcClientDetailsService extends JdbcClientDetailsService {
+//public class CustomJdbcClientDetailsService extends JdbcClientDetailsService {
+public class CustomJdbcClientDetailsService  {
 
     /**
      * 扩展的查询SQL，
@@ -20,10 +22,10 @@ public class CustomJdbcClientDetailsService extends JdbcClientDetailsService {
             "from oauth_client_details where client_id = ? and archived = 0 ";
 
 
-    public CustomJdbcClientDetailsService(DataSource dataSource) {
-        super(dataSource);
-        setSelectClientDetailsSql(SELECT_CLIENT_DETAILS_SQL);
-    }
+//    public CustomJdbcClientDetailsService(DataSource dataSource) {
+//        super(dataSource);
+//        setSelectClientDetailsSql(SELECT_CLIENT_DETAILS_SQL);
+//    }
 
 
 }

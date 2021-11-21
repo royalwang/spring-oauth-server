@@ -2,7 +2,7 @@ package com.monkeyk.sos.service.business;
 
 import com.monkeyk.sos.service.dto.AccessTokenDto;
 import org.junit.jupiter.api.Test;
-import org.springframework.security.oauth2.common.exceptions.InvalidGrantException;
+//import org.springframework.security.oauth2.common.exceptions.InvalidGrantException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -61,12 +61,12 @@ class PasswordInlineAccessTokenInvokerTest extends AbstractInlineAccessTokenInvo
         params.put("username", "useraaa");
         params.put("password", "password");
 
-        PasswordInlineAccessTokenInvoker accessTokenInvoker = new PasswordInlineAccessTokenInvoker();
-        assertThrows(InvalidGrantException.class, () -> {
-            final AccessTokenDto tokenDto = accessTokenInvoker.invoke(params);
-
-            assertNull(tokenDto);
-        });
+//        PasswordInlineAccessTokenInvoker accessTokenInvoker = new PasswordInlineAccessTokenInvoker();
+//        assertThrows(InvalidGrantException.class, () -> {
+//            final AccessTokenDto tokenDto = accessTokenInvoker.invoke(params);
+//
+//            assertNull(tokenDto);
+//        });
 
 
 //        System.out.println(accessTokenDto);

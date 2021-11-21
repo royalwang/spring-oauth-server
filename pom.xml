@@ -23,8 +23,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
-        <spring.security.oauth.version>2.3.8.RELEASE</spring.security.oauth.version>
-        <spring.security.jwt.version>1.1.1.RELEASE</spring.security.jwt.version>
+        <!--<spring.security.oauth.version>2.3.8.RELEASE</spring.security.oauth.version>-->
+        <!--<spring.security.jwt.version>1.1.1.RELEASE</spring.security.jwt.version>-->
         <test.skip>false</test.skip>
     </properties>
 
@@ -48,18 +48,25 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <!-- OAuth2-->
-        <dependency>
-            <groupId>org.springframework.security.oauth</groupId>
-            <artifactId>spring-security-oauth2</artifactId>
-            <version>${spring.security.oauth.version}</version>
-        </dependency>
+        <!--&lt;!&ndash; OAuth2&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.security.oauth</groupId>-->
+            <!--<artifactId>spring-security-oauth2</artifactId>-->
+            <!--<version>${spring.security.oauth.version}</version>-->
+        <!--</dependency>-->
 
-        <!-- JWT -->
+        <!--&lt;!&ndash; JWT &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.security</groupId>-->
+            <!--<artifactId>spring-security-jwt</artifactId>-->
+            <!--<version>${spring.security.jwt.version}</version>-->
+        <!--</dependency>-->
+
+        <!-- spring-authorization-server v2.1.1 -->
         <dependency>
             <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-jwt</artifactId>
-            <version>${spring.security.jwt.version}</version>
+            <artifactId>spring-security-oauth2-authorization-server</artifactId>
+            <version>0.2.0</version>
         </dependency>
 
 
