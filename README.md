@@ -368,6 +368,7 @@ Base on Spring-Boot
         <li><p><em>2019-07-04</em>        Add Redis <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">config</a> branch</p></li>
         <li><p><em>2019-08-04</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.1/">2.0.1</a> 版本</p></p></li>
         <li><p><em>2020-06-04</em>        发布 2.0.2 版本</p></p></li>
+        <li><p><em>2021-10-23</em>        开始开发 2.1.1 版本</p></p></li>
     </ol>
 </p>
 
@@ -434,6 +435,11 @@ Base on Spring-Boot
        <li>
             <p>
                 <a href="http://andaily.com/blog/?p=19884">OAuth2中 access_token，refresh_token的各类配置与使用场景FAQ</a>
+            </p>       
+       </li>       
+       <li>
+            <p>
+                <a href="https://andaily.com/blog/?p=20077">spring-security-oauth2从v2.4.0.RELEASE开始不推荐使用并迁移</a>
             </p>       
        </li>
 </ul>
