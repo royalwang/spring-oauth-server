@@ -170,7 +170,8 @@ Base on Spring-Boot
                 Date: 2020-06-05 / ---
             </p>
             <ol>
-                <li><p>升级access_token, refresh_token为JWT(Json Web Token), 提高性能</p></li>                        
+                <li><p>升级access_token, refresh_token为JWT(Json Web Token), 提高性能</p></li>    
+                <li><p>增加灵活性配置参数<code>reuse.refresh-token</code>可延长token时效</p></li>                     
                 <li><p><del>升级spring-security oauth2版本为2.3.8.RELEASE, 增加spring-security-jwt版本1.1.1.RELEASE</del></p></li>                        
             </ol>
             <br/>
