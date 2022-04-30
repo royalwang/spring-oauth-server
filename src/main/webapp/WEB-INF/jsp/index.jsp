@@ -112,7 +112,7 @@
     <p>
         请求受保护的资源时传递
         <mark>Access Token</mark>
-        有两种方式, 方式一在URL参数中添加<code>access_token</code>, 方式二在请求的Header中添加 <em>Authorization</em>, 其值为 <em>bearer
+        有两种方式, 方式一在URL参数中添加<code>access_token</code>, 方式二在请求的Header中添加 <em>Authorization</em>, 其值为 <em>Bearer
         your_access_token</em>
     </p>
 </div>
