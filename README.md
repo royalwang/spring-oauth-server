@@ -95,6 +95,11 @@ config-redis</a></strong>
         </thead>
         <tbody>
             <tr><td>spring.datasource.*</td><td>是</td><td>-</td><td>数据库连接相关配置</td></tr>
+            <tr><td>spring.mvc.*</td><td>是</td><td>-</td><td>Spring MVC相关配置</td></tr>
+            <tr><td>logging.level.root</td><td>是</td><td>INFO</td><td>默认的日志级别</td></tr>
+            <tr><td>sos.token.store</td><td>是</td><td>jwt</td><td>可选值：jwt,jdbc；配置Token存储方式，v2.1.0增加</td></tr>
+            <tr><td>sos.token.store.jwt.key</td><td>否</td><td>IH6S2dhCEMwGr7uE4fBakSuDh9SoIrRa</td><td>当<em>sos.token.store</em>为jwt时配置具体的jwt key(长度16位或32位)</td></tr>
+            <tr><td>sos.reuse.refresh-token</td><td>否</td><td>true</td><td>可选值：true,false；true重复使用refresh_token值直到过期，false每次刷新时生成新的refresh_token值(类似session机制进行续期)，v2.1.0增加</td></tr>
         </tbody>
     </table>
 </div>
