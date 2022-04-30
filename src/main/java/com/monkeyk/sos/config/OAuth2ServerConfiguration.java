@@ -115,7 +115,7 @@ public class OAuth2ServerConfiguration {
         ECKeyGenerator keyGenerator = new ECKeyGenerator(Curve.P_256);
         keyGenerator.keyID(RESOURCE_ID);
         JWK jwk = keyGenerator.generate();
-        System.out.println("\n Use auto-generated jwk: " + jwk.toJSONString());
+        System.out.println("\n Use auto-generated jwk: " + jwk.toJSONString() + "\nDO-NOT-USE-PRODUCTION");
         JWKSet jwkSet = new JWKSet(jwk);
 
         return new ImmutableJWKSet<>(jwkSet);
