@@ -163,7 +163,7 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <warSourceExcludes>*/classes/application.properties</warSourceExcludes>
-                    <packagingExcludes>*/classes/application.properties</packagingExcludes>
+<!--                    <packagingExcludes>*/classes/application.properties</packagingExcludes>-->
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
                         <manifestEntries>
