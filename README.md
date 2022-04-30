@@ -86,7 +86,18 @@ config-redis</a></strong>
 </li>
 </ol>
 </div>
-
+<div>
+    <h4>配置参数说明</h4>
+    说明配置文件<em>application.properties</em>中的主要变量。
+    <table>
+        <thead>
+            <tr><th>参数名</th><th>必须?</th><th>默认值</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>spring.datasource.*</td><td>是</td><td>-</td><td>数据库连接相关配置</td></tr>
+        </tbody>
+    </table>
+</div>
 
 <hr/>
 <h3>grant_type 介绍</h3>
@@ -118,7 +129,7 @@ config-redis</a></strong>
  我会把大家反馈的问题解决办法添加在这里.
  <br/>
  若在这两个地方没有找到解决办法的,
- 欢迎发邮件到<a href="mailto:shengzhao@shengzhaoli.com">shengzhao@shengzhaoli.com</a>一起讨论.
+ 欢迎发邮件到<a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a>一起讨论.
 </p>
 </li>
 
