@@ -82,7 +82,7 @@ config-redis</a></strong>
     提示：若打包为war则项目的 contextPath(根路径) 为 'spring-oauth-server'.
 </li>
 <li>
-参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
+参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/config/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/ 在界面上操作).
 </li>
 </ol>
 </div>
