@@ -454,7 +454,7 @@ config-redis</a></strong>
     与项目相关的技术文章请访问 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a> (不断更新与OAuth2相关的文章)
 </h4>
 <div>
-    <h3>问答与讨论</h3>
+    <h4>问答与讨论</h4>
     <br/>
     与项目相关的，与OAuth2相关的问题与回答，以及各类讨论请访问<br/>
     <a href="http://andaily.com/blog/?dwqa-question_category=oauth">http://andaily.com/blog/?dwqa-question_category=oauth</a>
@@ -476,7 +476,7 @@ config-redis</a></strong>
 
 
 <hr/>
-<p>
+<div>
     <h3>捐助</h3>
     <br/>
     支付宝: monkeyking1987@126.com (**钊)
@@ -484,7 +484,7 @@ config-redis</a></strong>
     快意江湖 -- 100元
     <br/>
     yufan -- 100元
-</p>
+</div>
 
 <hr/>
 <h3>其他...</h3>
