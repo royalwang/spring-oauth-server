@@ -1,4 +1,5 @@
-#spring-oauth-server
+# spring-oauth-server
+
 <br/>
 java config版本(Spring Boot)
 
@@ -31,7 +32,8 @@ Base on Spring-Boot
 <br/>
 <strong>MongoDB版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
 <br/>
-<strong>Redis版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">config-redis</a></strong>
+<strong>Redis版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">
+config-redis</a></strong>
 <hr/>
 <h3>
    OAuth客户端项目请访问 <a href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>
@@ -45,7 +47,7 @@ Base on Spring-Boot
 </h4>
 <hr/>
 
-<p>
+<div>
 <strong>如何使用?</strong>
 <ol>
 <li>
@@ -74,7 +76,7 @@ Base on Spring-Boot
 参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
 </li>
 </ol>
-</p>
+</div>
 
 
 <hr/>
@@ -136,7 +138,7 @@ Base on Spring-Boot
         <label>oauth2:authorization-server</label> 中的内容,将对应的 grant_type 注释或删掉即可
     </li>
     <li>
-        <p>
+        <div>
             <code>如何刷新access_token(refresh_token)</code>, 在通过客户端(如移动设备)登录成功后返回的数据如下
             <br/>
             <pre>{"access_token":"3420d0e0-ed77-45e1-8370-2b55af0a62e8","token_type":"bearer","refresh_token":"b36f4978-a172-4aa8-af89-60f58abe3ba1","expires_in":43199,"scope":"read write"}
@@ -150,7 +152,7 @@ Base on Spring-Boot
             注意: refresh_token 参数值必须与登录成功后获取的 refresh_token 一致, 且grant_type = refresh_token
             <br/>
             另: 刷新token 需要 ClientDetails 支持 refresh_token 类型的 grant_type (默认是支持的)
-        </p>
+        </div>
     </li>
 </ol>
 
@@ -213,7 +215,7 @@ Base on Spring-Boot
                 <li><p><del>修改ROLE的错误配置</del></p></li>
                 <li><p><del>Use spring-boot 2.0.2.RELEASE</del></p></li>
                 <li><p><del>Fix issue   #IJO9R  /oauth/rest_token 接口 client_secret字段没有校验</del></p></li>
-                <li><p><del>将项目用视频方式展现出来，更直观</p></li>                
+                <li><p><del>将项目用视频方式展现出来，更直观</del></p></li>                
             </ol>
             <br/>
        </li> 
@@ -327,7 +329,7 @@ Base on Spring-Boot
                 <li><p><del>#92 - Add database table column description. (添加数据库表的字段说明) </del></p></li>
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
                 <li><p><del> spring-oauth-server project add Bootstrap CSS  </del></p></li>
-                <li><p><del>#95 - Add 'client-details' management; create/delete, show testing links<del></p></li>
+                <li><p><del>#95 - Add 'client-details' management; create/delete, show testing links</del></p></li>
             </ol>
        </li>
 </ul>
@@ -344,7 +346,7 @@ Base on Spring-Boot
 
 <hr/>
 <strong>Project Log</strong>
-<p>
+<div>
     <ol>
         <li><p><em>2013-11-19</em>     Initial project, start push code</p></li>
         <li><p><em>2013-11-20</em>     发布<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/0.1/">0.1</a>版本</p></li>
@@ -364,10 +366,11 @@ Base on Spring-Boot
         <li><p><em>2018-04-21</em>        使用spring-boot重构,增加2.0.0实现 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.0/">2.0.0</a> </p></li>
         <li><p><em>2018-05-01</em>        开始 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">2.0.1</a> 分支开发</p></li>
         <li><p><em>2019-07-04</em>        Add Redis <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">config</a> branch</p></li>
-        <li><p><em>2019-08-04</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.1/">2.0.1</a> 版本</p></p></li>
-        <li><p><em>2020-06-04</em>        发布 2.0.2 版本</p></p></li>
+        <li><p><em>2019-08-04</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/2.0.1/">2.0.1</a> 版本</p></li>
+        <li><p><em>2020-06-04</em>        发布 2.0.2 版本</p></li>
+        <li><p><em>2022-05-01</em>        发布 2.1.0 版本</p></li>
     </ol>
-</p>
+</div>
 
 
 <hr/>
