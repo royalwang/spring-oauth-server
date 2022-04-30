@@ -18,7 +18,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
  * <p>
  * <p>
  * JWT TokenStore config
- *
+ * <p>
  * 使用时配置参数
  * <pre>sos.token.store=jwt</pre>
  *
@@ -32,12 +32,20 @@ public class JWTTokenStoreConfiguration {
 
     /**
      * 不同的系统用不同的jwtKey；不推荐共用一样的
-     *
+     * <p>
      * HMAC key, default: IH6S2dhCEMwGr7uE4fBakSuDh9SoIrRa
      * alg: HMACSHA256
      */
     @Value("${sos.token.store.jwt.key:IH6S2dhCEMwGr7uE4fBakSuDh9SoIrRa}")
     private String jwtKey;
+
+    /**
+     * 是否重复使用已经有的 refresh_token 直到过期，默认true
+     *
+     * @since 2.1.0
+     */
+    @Value("${sos.reuse.refresh-token:true}")
+    private boolean reuseRefreshToken;
 
 
     @Bean
@@ -77,6 +85,7 @@ public class JWTTokenStoreConfiguration {
         //support refresh token
         tokenServices.setSupportRefreshToken(true);
         tokenServices.setTokenEnhancer(tokenEnhancer);
+        tokenServices.setReuseRefreshToken(this.reuseRefreshToken);
         return tokenServices;
     }
 

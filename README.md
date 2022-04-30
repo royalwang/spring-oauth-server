@@ -165,13 +165,24 @@ Base on Spring-Boot
 <ul>    
 	   <li>
             <p>
-                Version: <strong>2.1.0</strong> [pending]
+                Version: <strong>2.1.1</strong> [pending]
                 <br/>
-                Date: 2020-06-05 / ---
+                Date: 2022-05-05 / ---
             </p>
             <ol>
-                <li><p>升级access_token, refresh_token为JWT(Json Web Token), 提高性能</p></li>    
-                <li><p>增加灵活性配置参数<code>reuse.refresh-token</code>可延长token时效</p></li>                     
+                <li><p>尝试升级替换spring-security-oauth2, 详见<a href="https://andaily.com/blog/?p=20077">背景说明</a></p></li>     
+            </ol>
+            <br/>
+       </li>   	   
+        <li>
+            <p>
+                Version: <strong>2.1.0</strong> [finished]
+                <br/>
+                Date: 2020-06-05 / 2022-05-01
+            </p>
+            <ol>
+                <li><p><del>升级access_token, refresh_token为JWT(Json Web Token), 提高性能</del></p></li>    
+                <li><p><del>增加灵活性配置参数<code>sos.reuse.refresh-token</code>可实时延长token时效(类似session机制)</del></p></li>                     
                 <li><p><del>升级spring-security oauth2版本为2.3.8.RELEASE, 增加spring-security-jwt版本1.1.1.RELEASE</del></p></li>                        
             </ol>
             <br/>

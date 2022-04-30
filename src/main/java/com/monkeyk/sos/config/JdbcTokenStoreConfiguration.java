@@ -1,5 +1,6 @@
 package com.monkeyk.sos.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,6 +28,14 @@ public class JdbcTokenStoreConfiguration {
 
 
     /**
+     * 是否重复使用已经有的 refresh_token 直到过期，默认true
+     *
+     * @since 2.1.0
+     */
+    @Value("${sos.reuse.refresh-token:true}")
+    private boolean reuseRefreshToken;
+
+    /**
      * JDBC TokenStore
      */
     @Bean
@@ -42,6 +51,7 @@ public class JdbcTokenStoreConfiguration {
         tokenServices.setClientDetailsService(clientDetailsService);
         //support refresh token
         tokenServices.setSupportRefreshToken(true);
+        tokenServices.setReuseRefreshToken(this.reuseRefreshToken);
         return tokenServices;
     }
 
