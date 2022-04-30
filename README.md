@@ -1,11 +1,10 @@
-# spring-oauth-server
+## spring-oauth-server
 
 <br/>
 java config版本(Spring Boot)
 
 <strong>Spring与OAuth2的整合示例</strong>
 
-<em>授权协议：<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/master/LICENSE">GPL-2.0</a></em>
 
 项目用Maven管理
 <br/>
@@ -15,19 +14,25 @@ Base on Spring-Boot
 使用的技术与版本号
 <ol>
  <li>JDK (1.8.0_40)</li>
- <li>Servlet (3.1.0)</li>
+ <li>spring-security-oauth2 (2.3.8.RELEASE)</li>
+ <li>spring-security-jwt (1.1.1.RELEASE)</li>
  <li>Spring Boot(2.1.4.RELEASE)</li>
 </ol>
-<h4>技术视频</h4>
+
+<h3>授权协议</h3>
+<em><a href="https://gitee.com/shengzhao/spring-oauth-server/tree/master/LICENSE">GPL-2.0</a></em>
+
+<h3>技术视频</h3>
 <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
 (持续更新...)
 <br/>
 <br/>
 <p>
-    1000 star Gitee奖杯: <a href="http://andaily.com/blog/wp-content/uploads/2019/09/sos-1000-stars.jpg" target="_blank">sos-1000-stars.jpg</a>
+    1000 star Gitee奖杯: <a href="http://andaily.com/blog/wp-content/uploads/2019/09/sos-1000-stars.jpg" target="_blank">sos-1000-stars.jpg</a> [2019年]
 </p>
 <hr/>
 
+<h3>版本分支介绍</h3>
 <strong>MySQL版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/">master</a></strong>
 <br/>
 <strong>MongoDB版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
@@ -35,12 +40,13 @@ Base on Spring-Boot
 <strong>Redis版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config-redis/">
 config-redis</a></strong>
 <hr/>
-<h3>
-   OAuth客户端项目请访问 <a href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>
-</h3>
-<h3>
+<h3>相关项目</h3>
+<h4>
+   OAuth2客户端项目请访问 <a href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>
+</h4>
+<h4>
    在线测试访问地址 <a href="http://andaily.com/spring-oauth-server/">http://andaily.com/spring-oauth-server/</a>
-</h3>
+</h4>
 <h4>
    Shiro与OLTU整合的OAuth2项目 <a href="https://gitee.com/mkk/oauth2-shiro">https://gitee.com/mkk/oauth2-shiro</a>
    (相比spring-oauth-server, 该项目入门门槛相对较低, 代码更加透明, 理解更容易,可扩展性更强, 且模块化开发)
@@ -48,7 +54,7 @@ config-redis</a></strong>
 <hr/>
 
 <div>
-<strong>如何使用?</strong>
+<h3>如何使用?</h3>
 <ol>
 <li>
 项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.3.3), 还有MySql(开发用的mysql版本号为5.6)
@@ -71,6 +77,9 @@ config-redis</a></strong>
 <br/>
    另: 也可通过maven package命令将项目编译为war文件(spring-oauth-server.war),
          将war放在Tomcat中并启动(注意: 这种方式需要将application.properties加入到classpath中并正确配置数据库连接信息).
+        <br/>
+        若使用<code>java -jar spring-oauth-server.war</code>启动, 则需要使用参数<em>spring.config.location</em>指定配置文件, 
+        如：<code>java -jar spring-oauth-server.war --spring.config.location=xxx.properties</code>
 </li>
 <li>
 参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
@@ -80,7 +89,7 @@ config-redis</a></strong>
 
 
 <hr/>
-<strong>grant_type</strong>
+<h3>grant_type 介绍</h3>
 <br/>
 说明OAuth2支持的grant_type(授权方式)与功能
 <ol>
@@ -94,7 +103,7 @@ config-redis</a></strong>
 
 
 <hr/>
-<strong>帮助与改进</strong>
+<h3>帮助与改进</h3>
 <ol>
 <li>
 <p>
@@ -122,7 +131,7 @@ config-redis</a></strong>
 </ol>
 
 <hr/>
-<strong>功能扩展</strong>
+<h3>功能扩展</h3>
 <ol>
     <li>
         <code>oauth_code存入数据库的配置</code>,  请下载文件 <a href="https://git.oschina.net/shengzhao/spring-oauth-server/attach_files/download?i=4858&u=http%3A%2F%2Ffiles.git.oschina.net%2Fgroup1%2FM00%2F00%2F31%2FcHwGbFQXzC-AeseiAAfnNw23X70580.jpg%3Ftoken%3De81934223d99a0fddc02639017b568a6%26ts%3D1421151523%26filename%3Doauth_code%E5%AD%98%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%85%8D%E7%BD%AE.jpg">oauth_code存入数据库的配置.jpg</a>
@@ -336,7 +345,7 @@ config-redis</a></strong>
 <br/>
 
 <hr/>
-<strong>数据库表字段说明</strong>
+<h3>数据库表字段说明</h3>
 <p>
     在0.3版本中添加了<code>db_table_description.html</code>文件(位于/others目录), 用来说明数据库脚本文件<code>oauth.ddl</code>中各表,各字段的用途及使用场合.
     <br/>
@@ -345,7 +354,7 @@ config-redis</a></strong>
 
 
 <hr/>
-<strong>Project Log</strong>
+<h3>Project Log</h3>
 <div>
     <ol>
         <li><p><em>2013-11-19</em>     Initial project, start push code</p></li>
@@ -374,7 +383,7 @@ config-redis</a></strong>
 
 
 <hr/>
-<strong>更多资源</strong>
+<h3>更多资源</h3>
 <p>以下是在学习工作中收集的更多关于OAuth2的资源,对深入理解与运用OAuth2有帮助</p>
 <ul>
        <li>
@@ -444,16 +453,16 @@ config-redis</a></strong>
 <h4>
     与项目相关的技术文章请访问 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a> (不断更新与OAuth2相关的文章)
 </h4>
-<p>
-    <strong>问答与讨论</strong>
+<div>
+    <h3>问答与讨论</h3>
     <br/>
     与项目相关的，与OAuth2相关的问题与回答，以及各类讨论请访问<br/>
     <a href="http://andaily.com/blog/?dwqa-question_category=oauth">http://andaily.com/blog/?dwqa-question_category=oauth</a>
-</p>
+</div>
 
 
 <hr/>
-<h4>使用案例</h4>
+<h3>使用案例</h3>
 <p>以下是已知的使用(或基于) spring-oauth-server 开源项目的各类商业项目(排名不分先后), 若你有案例希望添加, 请联系作者.</p>
 <ul>
     <li><p>Hongkong Parkway Online (在线医疗服务系统)</p></li>
@@ -468,7 +477,7 @@ config-redis</a></strong>
 
 <hr/>
 <p>
-    <strong>捐助</strong>
+    <h3>捐助</h3>
     <br/>
     支付宝: monkeyking1987@126.com (**钊)
     <br/>
@@ -478,6 +487,7 @@ config-redis</a></strong>
 </p>
 
 <hr/>
+<h3>其他...</h3>
 <p>
  关注更多开源项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
 </p>
